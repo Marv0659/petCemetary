@@ -1,13 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Pet Cemetary</h1>
-    <button>Slet et dyr</button>
-    <script type="module" src="index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Pet Cemetary</h1>
+  <main>
+    <section class="pets"></section>
+  </main>
+
+
+  <template>
+    <article>
+      <h2>Fluffy</h2>
+      <p>Stauts: <span class="status"></span></p>
+      <p>
+        <span class="species">Hund</span>
+        <span class="race">Golden Retriever</span>
+      </p>
+      <div class="actions">
+        <button data-id="15" data-action="delete">Slet</button>
+        <button data-id="15" data-action="update">Update</button>
+
+      </div>
+    </article>
+  </template>
+
+  <form action="" onsubmit="return false;">
+    <fieldset>
+      <legend>Pet Info</legend>
+
+      <div class="form-group">
+        <label for="race">Pet name</label>
+
+        <input id="pet-name" name="pet-name" type="text">
+      </div>
+      <div class="form-group">
+        <label for="race">Pet race</label>
+
+        <input id="full-name" name="full-name" type="text">
+      </div>
+
+      <div class="form-group">
+        <label for="species">Pet specie
+          <span>no need for a whole novel here</span>
+        </label>
+
+        <input id="species" name="species" type="text">
+      </div>
+
+      <div class="form-group">
+        <label for="activity-level">Activity level
+          <span>Must be between 1 and 5 digits long</span>
+        </label>
+        <select name="activity-level" id="activity-level">
+          <option value="">Choose Activity Level</option>
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="pet-trait">
+          Pet Trait
+        </label>
+
+        <input id="pet-trait" name="pet-trait" type="text">
+      </div>
+
+
+      <div class="form-group">
+        <label for="address-line-1">Pet date of birth</label>
+
+        <input id="address-line-1" name="address-line-1" type="date">
+      </div>
+
+      <div class="form-group">
+        <label for="status">Is your pet with still with us today? <span>(yes or no)</span></label>
+
+        <select name="status" id="status">
+          <option value="status">Yes</option>
+          <option value="status">No</option>
+        </select>
+      </div>
+    </fieldset>
+    <button>Submit</button>
+  </form>
+
+
+  <script type="module" src="index.js"></script>
+</body>
+
 </html>
